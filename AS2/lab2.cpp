@@ -23,7 +23,7 @@ void initArray(NodeData*[]);             // initialize array to NULL
 int main() {
 	// create file object infile and open it
 	// for testing, call your data file something appropriate, e.g., data2.txt
-	ifstream infile("G:\\My Drive\\Sping19\\343\\AS2\\data2.txt");
+	ifstream infile("data2.txt");
 	if (!infile) {
 		cout << "File could not be opened." << endl;
 		return 1;
@@ -48,11 +48,11 @@ int main() {
 	cout << endl;
 	BinTree first(T);                  // test copy constructor
 	dup = dup = T;                     // test operator=, self-assignment
-//	while (!infile.eof()) {
+	while (!infile.eof()) {
 		cout << "Tree Inorder:" << endl << T;             // operator<< does endl
 		T.displaySideways();
 
-		// test retrieve
+		// test retrieve 
 		NodeData* p;                    // pointer of retrieved object
 		bool found;                     // whether or not object was found in tree
 		found = T.retrieve(andND, p);
@@ -62,16 +62,15 @@ int main() {
 		found = T.retrieve(sssND, p);
 		cout << "Retrieve --> sss:  " << (found ? "found" : "not found") << endl;
 
-
-		// test getHeight
+		// test getHeight 
 		cout << "Height    --> and:  " << T.getHeight(andND) << endl;
 		cout << "Height    --> not:  " << T.getHeight(notND) << endl;
 		cout << "Height    --> sss:  " << T.getHeight(sssND) << endl;
-		cout << "Height    --> tttt: " << T.getHeight(ttttND) << endl;
+		cout << "Height    --> tttt:  " << T.getHeight(ttttND) << endl;
 		cout << "Height    --> ooo:  " << T.getHeight(oooND) << endl;
-		cout << "Height    --> y:    " << T.getHeight(yND) << endl;
+		cout << "Height    --> y:  " << T.getHeight(yND) << endl;
 
-		// test ==, and !=
+		// test ==, and != 
 		T2 = T;
 		cout << "T == T2?     " << (T == T2 ? "equal" : "not equal") << endl;
 		cout << "T != first?  " << (T != first ? "not equal" : "equal") << endl;
@@ -80,30 +79,25 @@ int main() {
 
 		// somewhat test bstreeToArray and arrayToBSTree
 		T.bstreeToArray(ndArray);
-		cout << "Need to Implement: arrayToBSTree & fix Height" << endl;
-//		T.arrayToBSTree(ndArray);
-//		T.displaySideways();
-//
-//		T.makeEmpty();                  // empty out the tree
-//		initArray(ndArray);             // empty out the array
-//
-//		cout << "---------------------------------------------------------------"
-//			<< endl;
-//		cout << "Initial data:" << endl << "  ";
-//		buildTree(T, infile);
-//		cout << endl;
-//	}
+		T.arrayToBSTree(ndArray);
+		T.displaySideways();
+
+		T.makeEmpty();                  // empty out the tree
+		initArray(ndArray);             // empty out the array
+
+		cout << "---------------------------------------------------------------"
+			<< endl;
+		cout << "Initial data:" << endl << "  ";
+		buildTree(T, infile);
+		cout << endl;
+	}
 
 	return 0;
 }
 
 //------------------------------- buildTree ----------------------------------
-// YOU COMMENT
-
-// To build a tree, read strings from a line, terminating when "$$" is
-// encountered. Since there is some work to do before the actual insert that is
-// specific to the client problem, it's best that building a tree is not a 
-// member function. It's a global function. 
+// To build a tree, read strings from a line, terminated when "$$"
+// If input contains duplicate values, delete ptrs (!success)
 
 void buildTree(BinTree& T, ifstream& infile) {
 	string s;
