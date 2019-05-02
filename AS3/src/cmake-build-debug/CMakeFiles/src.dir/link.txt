@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/src.dir/testing.cpp.o CMakeFiles/src.dir/graphM.cpp.o CMakeFiles/src.dir/nodedata.cpp.o  -o src 

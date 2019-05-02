@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jeffmur/UWB/AS3/src/graphM.cpp
+iostream
+-
+fstream
+-
+string
+-
+graphM.h
+/home/jeffmur/UWB/AS3/src/graphM.h
+
+/home/jeffmur/UWB/AS3/src/graphM.h
+nodedata.h
+/home/jeffmur/UWB/AS3/src/nodedata.h
+
+/home/jeffmur/UWB/AS3/src/nodedata.h
+string
+-
+iostream
+-
+fstream
+-
+
