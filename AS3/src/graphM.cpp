@@ -50,7 +50,7 @@ void GraphM::buildGraph(ifstream& infile) {
 
         // add to adjacency matrix (all values currently are -1)
         C[from][to] = weight;
-        cout << from << endl;
+        cout << "From: " << from << "\t To: " << to << "\t Weight: " << weight << endl;
     }
 }
 
@@ -64,9 +64,26 @@ void GraphM::deleteEdge(int from, int to){
     // error handling??
     C[from][to] = 0;
 }
-/* findShortestPath: find the shortest path between every node to every other node in the graph,
-    i.e., TableType T is updated with shortest path information */
-void GraphM::findShortestPath() {}
+// findShortestPath: find the shortest path between every node to every other node in the graph,
+//    i.e., TableType T is updated with shortest path information
+//    visited = shortest path found
+
+void GraphM::findShortestPath() {
+    for(int source = 1; source <= size; source++){ // check vector 1...n
+        T[source][source].dist = 0; // from n to n = 0 always
+
+        // finds the shortest distance from source to all other nodes
+        for(int w = 1; w <= size; w++) {
+            // find v -- not visited, shortest distance at this point
+            int v = source;
+            // mark v visited
+            T[v][w].visited = true;
+            // for each w adjacent to v (if C[V][W] != 0) and smallest weight
+            // if(w is not visited)
+            //      T[source][w].dist=min(T[source][w].dist, T[source][v].dist+C[V][W])
+        }
+    }
+}
 
 /* displayAll: uses couts to demonstrate that the algorithm works properly.
     For the data in Figure 1, it will produce the sample output below (similar to, use the general format,
@@ -83,4 +100,4 @@ void GraphM::findShortestPath() {}
 
 /* Add utility functions as needed
     * initArray(); - Constructor
-    * loadFile(): - buildGraph */
+*/

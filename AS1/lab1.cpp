@@ -67,11 +67,13 @@ int main() {
 	D.setCoeff(50, 0);                        // set x^0 coeff to 50
 	D.setCoeff(50, 20000);                    // set x^20000 coeff to 50
 	cout << "D =" << D << endl << endl;
-
-	cout << "Integral of Z1" << endl;
-	cout << "Z1= " << Z1 << endl;			// inital
-	Z1.integrate();				// integrate (integral of poly)
-	cout << "Z1= " << Z1 << endl;			// result
+	Poly F(10,4);
+	F.setCoeff(-7,2);
+	F.setCoeff(3,0);
+	cout << "Integral of F" << endl;
+	cout << "F= " << F << endl;			// inital
+	F.integrate();				// integrate (integral of poly)
+	cout << "F= " << F << endl;			// result
 	return 0;
 }
 
