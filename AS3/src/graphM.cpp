@@ -73,14 +73,15 @@ void GraphM::findShortestPath() {
         T[source][source].dist = 0; // from n to n = 0 always
 
         // finds the shortest distance from source to all other nodes
-        for(int w = 1; w <= size; w++) {
+        for(int v = 1; v <= size; v++) {
             // find v -- not visited, shortest distance at this point
-            int v = source;
             // mark v visited
-            T[v][w].visited = true;
+            T[source][v].visited = true;
             // for each w adjacent to v (if C[V][W] != 0) and smallest weight
-            // if(w is not visited)
-            //      T[source][w].dist=min(T[source][w].dist, T[source][v].dist+C[V][W])
+            for(int w = 1; w <= size; w++){
+                if(!T[v][w].visited)
+                    T[source][w].dist=T[source][w].dist+C[v][w];
+            }
         }
     }
 }
