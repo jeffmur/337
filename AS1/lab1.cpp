@@ -67,6 +67,7 @@ int main() {
 	D.setCoeff(50, 0);                        // set x^0 coeff to 50
 	D.setCoeff(50, 20000);                    // set x^20000 coeff to 50
 	cout << "D =" << D << endl << endl;
+<<<<<<< HEAD
 
 	Poly N(0,4);
 	cin >> N;
@@ -74,6 +75,15 @@ int main() {
 	cout << "Integral: " << N << endl;
 	N.derive();
 	cout << "Derive  : " << N << endl; 
+=======
+	Poly F(10,4);
+	F.setCoeff(-7,2);
+	F.setCoeff(3,0);
+	cout << "Integral of F" << endl;
+	cout << "F= " << F << endl;			// inital
+	F.integrate();				// integrate (integral of poly)
+	cout << "F= " << F << endl;			// result
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
 	return 0;
 }
 

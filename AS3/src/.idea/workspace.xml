@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3553f66a-6f67-45a9-adcd-366d031cc4e9" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../../AS1/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../AS1/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../AS1/lab1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../AS1/lab1.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../AS1/poly.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../AS1/poly.cpp" afterDir="false" />
@@ -26,6 +27,11 @@
       <change beforePath="$PROJECT_DIR$/graphM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graphM.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphM.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphM.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab3.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.cpp" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/graphM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graphM.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphM.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphM.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/testing.cpp" afterDir="false" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +49,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab3.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="725">
               <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+=======
+            <state relative-caret-position="330">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
             </state>
           </provider>
         </entry>
@@ -52,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="60">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
@@ -61,8 +72,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="203">
               <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+=======
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -73,8 +89,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graphM.h">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="957">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
+=======
+            <state relative-caret-position="210">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
             </state>
           </provider>
         </entry>
@@ -82,8 +103,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/graphM.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="921">
               <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+=======
+            <state relative-caret-position="372">
+              <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
               <folding>
                 <element signature="e#57#75#0" expanded="true" />
               </folding>
@@ -107,17 +133,27 @@
         <option value="$PROJECT_DIR$/graph.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/testing.cpp" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/lab3.cpp" />
+=======
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
         <option value="$PROJECT_DIR$/graphM.h" />
         <option value="$PROJECT_DIR$/graphM.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="1987" />
     <option name="y" value="35" />
     <option name="width" value="1853" />
     <option name="height" value="2121" />
+=======
+    <option name="x" value="268" />
+    <option name="y" value="154" />
+    <option name="width" value="1211" />
+    <option name="height" value="769" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -143,6 +179,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -179,6 +216,7 @@
       <option name="presentableId" value="Default" />
       <updated>1556809467267</updated>
       <workItem from="1556809468853" duration="3218000" />
+<<<<<<< HEAD
       <workItem from="1556824074517" duration="12632000" />
       <workItem from="1557104473228" duration="1127000" />
       <workItem from="1557345779034" duration="28000" />
@@ -189,29 +227,52 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1556830292870</updated>
+=======
+      <workItem from="1556824074517" duration="5481000" />
+      <workItem from="1557254083887" duration="5653000" />
+      <workItem from="1557265156627" duration="1993000" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="17005000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="35" width="3706" height="2125" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="16345000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06522941" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.32383" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.12830189" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21922246" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26673865" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Messages" order="8" weight="0.37062937" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32938007" />
+=======
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.37041035" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32974717" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32991913" />
       <window_info anchor="bottom" id="CMake" order="12" weight="0.32974717" />
@@ -246,6 +307,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -289,6 +351,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test from Clion - Linux PC" />
     <option name="LAST_COMMIT_MESSAGE" value="Test from Clion - Linux PC" />
+=======
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/testing.cpp</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -300,15 +374,30 @@
     <entry file="file://$PROJECT_DIR$/lab3output.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file:///usr/include/stdlib.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="175" column="16" selection-start-line="175" selection-start-column="16" selection-end-line="175" selection-end-column="16" />
+=======
+    <entry file="file://$PROJECT_DIR$/lab3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab3.cpp">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphM.h">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="725">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
         </state>
@@ -318,19 +407,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+=======
+        <state relative-caret-position="210">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testing.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="203">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+=======
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/graphM.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="957">
@@ -342,6 +441,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="921">
           <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+=======
+    <entry file="file://$PROJECT_DIR$/graphM.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
           <folding>
             <element signature="e#57#75#0" expanded="true" />
           </folding>

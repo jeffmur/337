@@ -51,7 +51,11 @@ void GraphM::buildGraph(ifstream& infile) {
 
         // add to adjacency matrix (all values currently are -1)
         C[from][to] = weight;
+<<<<<<< HEAD
         cout << "From: " << from << " \t To: " << to << " \t Weight: " << weight << endl;
+=======
+        cout << "From: " << from << "\t To: " << to << "\t Weight: " << weight << endl;
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
     }
 }
 
@@ -65,6 +69,7 @@ void GraphM::deleteEdge(int from, int to){
     // error handling??
     C[from][to] = 0;
 }
+<<<<<<< HEAD
 /* findShortestPath: find the shortest path between every node to every other node in the graph,
     i.e., TableType T is updated with shortest path information */
 void GraphM::findShortestPath() {
@@ -79,6 +84,27 @@ void GraphM::findShortestPath() {
 //            if (w is not visited)
 //            T[source][w].dist=min(T[source][w].dist, T[source][v].dist+C[V][W])
 //        }
+=======
+// findShortestPath: find the shortest path between every node to every other node in the graph,
+//    i.e., TableType T is updated with shortest path information
+//    visited = shortest path found
+
+void GraphM::findShortestPath() {
+    for(int source = 1; source <= size; source++){ // check vector 1...n
+        T[source][source].dist = 0; // from n to n = 0 always
+
+        // finds the shortest distance from source to all other nodes
+        for(int v = 1; v <= size; v++) {
+            // find v -- not visited, shortest distance at this point
+            // mark v visited
+            T[source][v].visited = true;
+            // for each w adjacent to v (if C[V][W] != 0) and smallest weight
+            for(int w = 1; w <= size; w++){
+                if(!T[v][w].visited)
+                    T[source][w].dist=T[source][w].dist+C[v][w];
+            }
+        }
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a
     }
 }
 
@@ -96,6 +122,7 @@ void GraphM::findShortestPath() {
     Troll under Aurora bridge */
 
 /* Add utility functions as needed
+<<<<<<< HEAD
     * initArray(); - Constructor */
 
 int GraphM::getNodeSize(int costArray[100]){
@@ -106,3 +133,7 @@ int GraphM::getNodeSize(int costArray[100]){
     }
     return nodeSize;
 }
+=======
+    * initArray(); - Constructor
+*/
+>>>>>>> 1cb0c06a9fdfa9419e5c50ca98b882df8cf7df4a

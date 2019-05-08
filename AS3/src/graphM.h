@@ -12,7 +12,7 @@ const int MAXNODES = 100;                 // "each {graph} having at most 100 no
 class GraphM {
     struct TableType {
         bool visited = false;             // whether node has been visited
-        int dist = -1;                    // shortest distance from source known so far (-1 = infinity)
+        int dist = 0;                    // shortest distance from source known so far (-1 = infinity)
         int path = 0;                     // previous node in path of min dist
 
     };
