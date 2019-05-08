@@ -1,4 +1,4 @@
-/home/jeffmur/IDE/clion-2019.1.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeffmur/UWB/AS3/src
+/home/jeffmur/IDES/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jeffmur/UWB/AS3/src
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/jeffmur/UWB/AS3/src/cmake-build-debug

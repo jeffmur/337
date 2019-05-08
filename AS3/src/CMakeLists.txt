@@ -3,4 +3,4 @@ project(src)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(src testing.cpp graphM.cpp graphM.h nodedata.cpp nodedata.h)
+add_executable(src testing.cpp graphM.cpp graphM.h nodedata.h nodedata.cpp)
