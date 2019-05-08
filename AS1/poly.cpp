@@ -29,7 +29,7 @@ void Poly::resize(int exp){
     int oldSize = size;
     // reset poly with new size
     size = exp + 1;
-    coeffPtr = new double[size];
+    coeffPtr = new double[size+1];
     fill();
     // copy over prev values
     for(int i = 0; i < oldSize; i++)
@@ -88,6 +88,7 @@ Poly::Poly(int new_co, int new_exp) {
 Poly::Poly(int new_co){
     size = 1;
     coeffPtr = new double[size];
+    fill();
     coeffPtr[0] = new_co;
 }
 /* ------------------------------------Poly()-----------------------------------
@@ -222,7 +223,7 @@ Poly& Poly::operator=(const Poly& a) {
     // initialize array
     resize(a.size-1);
     // copy values
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i <= size; i++)
         coeffPtr[i] = a.coeffPtr[i];
     return *this;
 }
@@ -302,16 +303,33 @@ istream& operator>>(istream& input, Poly& a) {
 
 /* ------------------------------------integrate---------------------------------
  * Description: integrate a polynomial exp
- * Parameters : exponent aka power
  * -----------------------------------------------------------------------------*/
 void Poly::integrate() {
     Poly I;
-    I.size = this->size;
-    I.coeffPtr = new double[size+1];
+    I.size = size+1;
+    I.coeffPtr = new double[I.size];
+    I.fill();
     // copy old values
     for(int i = 0; i < size; i++)
 	I.coeffPtr[i+1] = this->coeffPtr[i]/(i+1);
-    // this points to new object created 
+    // this points to new Poly created 
     *this = I;
+    size++;
+}
+
+/* ------------------------------------derive---------------------------------
+ * Description: derivative of a polynomial exp
+ * -----------------------------------------------------------------------------*/
+void Poly::derive() {
+    // initialize Derivative Poly
+    Poly D;
+    D.size = this->size-1;
+    D.coeffPtr = new double[size];
+    D.fill();
+    for(int i = 1; i <= size; i++)
+    	D.coeffPtr[i-1] = (i)*coeffPtr[i];
+    *this = D;
+    size--;
+    
 }
 

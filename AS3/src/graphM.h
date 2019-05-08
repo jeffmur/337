@@ -30,7 +30,7 @@ public:
     void findShortestPath();
     void displayAll();
     void display();
-
+    int getNodeSize(int costArray[100]);
 
 };
 

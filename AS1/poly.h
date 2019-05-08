@@ -26,6 +26,7 @@ public:
     void resize(int newSize);
     void fill();
     void integrate();
+    void derive();
     Poly operator+(const Poly &) const;
     Poly operator-(const Poly &) const;
     Poly operator*(const Poly &) const;

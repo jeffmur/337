@@ -68,10 +68,12 @@ int main() {
 	D.setCoeff(50, 20000);                    // set x^20000 coeff to 50
 	cout << "D =" << D << endl << endl;
 
-	cout << "Integral of Z1" << endl;
-	cout << "Z1= " << Z1 << endl;			// inital
-	Z1.integrate();				// integrate (integral of poly)
-	cout << "Z1= " << Z1 << endl;			// result
+	Poly N(0,4);
+	cin >> N;
+	N.integrate();
+	cout << "Integral: " << N << endl;
+	N.derive();
+	cout << "Derive  : " << N << endl; 
 	return 0;
 }
 

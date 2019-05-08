@@ -37,6 +37,7 @@ void GraphM::buildGraph(ifstream& infile) {
     }
     string f, t, w;
     int from, to, weight;
+    cout << "Adding values to Adjacency Matrix..." << endl;
     for (;;) {
         // input as strings
         infile >> f >> t >> w;
@@ -50,7 +51,7 @@ void GraphM::buildGraph(ifstream& infile) {
 
         // add to adjacency matrix (all values currently are -1)
         C[from][to] = weight;
-        cout << from << endl;
+        cout << "From: " << from << " \t To: " << to << " \t Weight: " << weight << endl;
     }
 }
 
@@ -66,7 +67,20 @@ void GraphM::deleteEdge(int from, int to){
 }
 /* findShortestPath: find the shortest path between every node to every other node in the graph,
     i.e., TableType T is updated with shortest path information */
-void GraphM::findShortestPath() {}
+void GraphM::findShortestPath() {
+    for (int source = 1; source <= nodeSize; source++) {
+        T[source][source].dist = 0;
+
+        // finds the shortest distance from source to all other nodes
+//        for (int i = 1; i<= nodeSize; i++) {
+//            find v //not visited, shortest distance at this point
+//            mark v visited
+//            for each w adjacent to v
+//            if (w is not visited)
+//            T[source][w].dist=min(T[source][w].dist, T[source][v].dist+C[V][W])
+//        }
+    }
+}
 
 /* displayAll: uses couts to demonstrate that the algorithm works properly.
     For the data in Figure 1, it will produce the sample output below (similar to, use the general format,
@@ -82,5 +96,13 @@ void GraphM::findShortestPath() {}
     Troll under Aurora bridge */
 
 /* Add utility functions as needed
-    * initArray(); - Constructor
-    * loadFile(): - buildGraph */
+    * initArray(); - Constructor */
+
+int GraphM::getNodeSize(int costArray[100]){
+    int nodeSize = 0;
+    for(int i = 1; i <= 100; i++){
+        if(costArray[i] != 0)
+            nodeSize++;
+    }
+    return nodeSize;
+}
