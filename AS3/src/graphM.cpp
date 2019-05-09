@@ -87,6 +87,7 @@ void GraphM::findShortestPath() {
             for(int w = 1; w <= size; w++){
                 // checks if it is adjacent
                 if(C[v][w] != 0) {
+                    // assign path only if not visited
                     if (!T[v][w].visited) {
                         T[v][w].dist = (T[source][v].dist + C[v][w]);
                         T[v][w].visited = true;
@@ -94,8 +95,12 @@ void GraphM::findShortestPath() {
                         // found shorter path - updates source vector
                         if(T[source][w].dist > T[v][w].dist){
                             T[source][w].dist = T[v][w].dist;
-                            T[source][w].visited = false;
                             T[source][w].path = v;
+                            // set adjacent matrix to false
+                            for(int i = 1; i < size; i++)
+                                T[w][i].visited = false;
+                            // restart path
+                            findShortestPath();
                         }
                     }
                 }
@@ -104,6 +109,9 @@ void GraphM::findShortestPath() {
     }
 }
 
+int GraphM::minDistance(int fromIndex, int toIndex) {
+
+}
 /* displayAll: uses couts to demonstrate that the algorithm works properly.
     For the data in Figure 1, it will produce the sample output below (similar to, use the general format,
     but blanks do not need not be exact): */

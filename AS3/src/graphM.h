@@ -29,6 +29,7 @@ public:
     void insertEdge(int from, int to, int weight);
     void deleteEdge(int from, int to);
     void findShortestPath();
+    int minDistance(int from, int to);
     void displayAll();
     void display();
     int getNodeSize(int costArray[100]);
