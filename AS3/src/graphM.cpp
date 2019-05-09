@@ -67,21 +67,6 @@ void GraphM::deleteEdge(int from, int to){
     C[from][to] = 0;
 }
 
-
-/* findShortestPath: find the shortest path between every node to every other node in the graph,
-    i.e., TableType T is updated with shortest path information */
-//void GraphM::findShortestPath() {
-//    for (int source = 1; source <= nodeSize; source++) {
-//        T[source][source].dist = 0;
-
-        // finds the shortest distance from source to all other nodes
-//        for (int i = 1; i<= nodeSize; i++) {
-//            find v //not visited, shortest distance at this point
-//            mark v visited
-//            for each w adjacent to v
-//            if (w is not visited)
-//            T[source][w].dist=min(T[source][w].dist, T[source][v].dist+C[V][W])
-//        }
 // findShortestPath: find the shortest path between every node to every other node in the graph,
 //    i.e., TableType T is updated with shortest path information
 //    visited = shortest path found
@@ -90,12 +75,12 @@ void GraphM::deleteEdge(int from, int to){
 
 void GraphM::findShortestPath() {
     for(int source = 1; source <= size; source++){ // check vector 1...n
-        T[source][source].dist = 0; // from n to n = 0 always
+        // from n to n = 0
+        T[source][source].dist = 0;
 
         // finds the shortest distance from source to all other nodes
         for(int v = 1; v <= size; v++) {
             // find v -- not visited, shortest distance at this point
-            // getShortestPath(from source, to V)
             // mark v visited
             T[source][v].visited = true;
             // for each w adjacent to v (if C[V][W] != 0) and smallest weight
@@ -106,6 +91,12 @@ void GraphM::findShortestPath() {
                         T[v][w].dist = (T[source][v].dist + C[v][w]);
                         T[v][w].visited = true;
                         T[v][w].path = v;
+                        // found shorter path - updates source vector
+                        if(T[source][w].dist > T[v][w].dist){
+                            T[source][w].dist = T[v][w].dist;
+                            T[source][w].visited = false;
+                            T[source][w].path = v;
+                        }
                     }
                 }
             }
