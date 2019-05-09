@@ -12,7 +12,8 @@ using namespace std;
         the data member T is initialized to sets all dist to infinity,
         sets all visited to false,
         and sets all path to 0. */
-
+GraphM::~GraphM(){
+}
 
 /* buildGraph: builds up graph node information
     and adjacency matrix of edges between each node reading from a data file. */
@@ -94,7 +95,7 @@ void GraphM::findShortestPath() {
         // finds the shortest distance from source to all other nodes
         for(int v = 1; v <= size; v++) {
             // find v -- not visited, shortest distance at this point
-            // getShortestPath(from, to)
+            // getShortestPath(from source, to V)
             // mark v visited
             T[source][v].visited = true;
             // for each w adjacent to v (if C[V][W] != 0) and smallest weight
@@ -104,6 +105,7 @@ void GraphM::findShortestPath() {
                     if (!T[v][w].visited) {
                         T[v][w].dist = (T[source][v].dist + C[v][w]);
                         T[v][w].visited = true;
+                        T[v][w].path = v;
                     }
                 }
             }

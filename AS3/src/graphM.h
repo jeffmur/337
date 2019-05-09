@@ -24,6 +24,7 @@ private:
     TableType T[MAXNODES][MAXNODES];      // stores visited, distance, path
 
 public:
+    ~GraphM();
     void buildGraph(ifstream& infile);
     void insertEdge(int from, int to, int weight);
     void deleteEdge(int from, int to);
