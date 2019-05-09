@@ -1,0 +1,13 @@
+------- AS3 -------- due 5/14 ------------
+* Part 1
+** Dijkstra Algorithm still does not work
+*** Rework? or make sub methods
+*** Redo edges
+*** Print
+*** So basically you haven't started
+
+* Part 2
+***** NOT STARTED
+
+------ Wifi Parse ----- due AFTER AS3 ------
+
