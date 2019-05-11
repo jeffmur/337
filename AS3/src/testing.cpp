@@ -8,7 +8,6 @@ int main() {
     GraphM Test;
     Test.buildGraph(infile1);
     Test.findShortestPath();
-    Test.insertEdge(1,4, 10);
-    Test.findShortestPath();
+    Test.displayAll();
     return 0;
 }

@@ -31,7 +31,7 @@ public:
     void findShortestPath();
     int minDistance(int from, int to, int min);
     void displayAll();
-    void display();
+    void display(int from, int to);
     int getPath(int from, int to, int weight);
 
 };

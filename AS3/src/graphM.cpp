@@ -64,6 +64,8 @@ void GraphM::insertEdge(int from, int to, int weight) {
     if(to > size)
         size = to;
     C[from][to] = weight;
+    T[from][to].dist = weight;
+    T[from][to].visited = false;
 }
 /* removeEdge (int from, int to): remove an edge between two given nodes */
 void GraphM::deleteEdge(int from, int to){
@@ -132,6 +134,22 @@ int GraphM::minDistance(int fromIndex, int toIndex, int min) {
 /* displayAll: uses couts to demonstrate that the algorithm works properly.
     For the data in Figure 1, it will produce the sample output below (similar to, use the general format,
     but blanks do not need not be exact): */
+void GraphM::displayAll() {
+    cout << "Description               From node  To node  Dijkstra's  Path    " << endl;
+    for(int v = 1; v <= size; v++){
+        cout << *data[v] << endl;
+        for(int w = 1; w <= size; w++){
+            if(w == v) continue;
+            if(T[v][w].dist == -1){
+                printf("%31i %10i %8s \n", v, w, "---");
+                continue;
+            }
+            printf("%31i %10i %8i %7i \n", v, w, T[v][w].dist, T[v][w].path);
+        }
+    }
+
+
+}
 
 /* display: uses couts to display the shortest distance with path info between the fromNode to toNode.
     For the data in Figure 1, a call of G.display(1,4)
@@ -141,6 +159,11 @@ int GraphM::minDistance(int fromIndex, int toIndex, int min) {
     Woodland Park Zoo
     Green Lake Starbucks
     Troll under Aurora bridge */
+void GraphM::display(int from, int to) {
+    cout << "Description               From node  To node  Dijkstra's  Path    " << endl;
+    cout << *data[from] << endl;
+    printf("%31i %10i %8i %7i  \n", from, to, T[from][to].dist, T[from][to].path);
+}
 
 /* Add utility functions as needed
     * initArray(); - Constructor */
