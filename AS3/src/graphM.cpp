@@ -54,7 +54,7 @@ void GraphM::buildGraph(ifstream& infile) {
 
         // add to adjacency matrix (all values currently are -1)
         C[from][to] = weight;
-        cout << "From: " << from << "\t To: " << to << " \t Weight: " << weight << endl;
+        cout << "From: " << from << " \t To: " << to << " \t  Weight: " << weight << endl;
     }
 }
 
@@ -103,6 +103,8 @@ void GraphM::findShortestPath() {
                         // mark as visited & set path
                         T[v][w].visited = true;
                         T[v][w].path = v;
+                        if(T[source][w].dist == -1)
+                            T[source][w].dist = minDist;
                     }
                 }
             }
@@ -124,6 +126,9 @@ int GraphM::minDistance(int fromIndex, int toIndex, int min) {
             nextPath = v;
         }
     }
+    // infinite loop check
+    if(C[fromIndex][toIndex] == C[toIndex][fromIndex] && C[fromIndex][toIndex] != 0)
+        return min;
     // min is unchanged then return
     if(min == INT8_MAX)
         return 0;
@@ -139,12 +144,15 @@ void GraphM::displayAll() {
     for(int v = 1; v <= size; v++){
         cout << *data[v] << endl;
         for(int w = 1; w <= size; w++){
+            int minDist = minDistance(v, w, INT8_MAX);
+            if(C[v][w] < minDist && C[v][w] > 0)
+                minDist = C[v][w];
             if(w == v) continue;
-            if(T[v][w].dist == -1){
+            if(T[v][w].dist <= 0){
                 printf("%31i %10i %8s \n", v, w, "---");
                 continue;
             }
-            printf("%31i %10i %8i %7i \n", v, w, T[v][w].dist, T[v][w].path);
+            printf("%31i %10i %8i %7i \n", v, w, minDist, T[v][w].path);
         }
     }
 
@@ -162,7 +170,7 @@ void GraphM::displayAll() {
 void GraphM::display(int from, int to) {
     cout << "Description               From node  To node  Dijkstra's  Path    " << endl;
     cout << *data[from] << endl;
-    printf("%31i %10i %8i %7i  \n", from, to, T[from][to].dist, T[from][to].path);
+    printf("%31i %10i %8i %7i  \n", from, to, minDistance(from, to, INT8_MAX), T[from][to].path);
 }
 
 /* Add utility functions as needed
