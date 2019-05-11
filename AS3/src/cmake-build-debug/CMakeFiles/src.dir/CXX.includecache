@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/jeffmur/UWB/AS3/src/graphM.h
+/home/jeffmur/UWB/AS3/src/graphm.cpp
+iostream
+-
+fstream
+-
+string
+-
+graphm.h
+/home/jeffmur/UWB/AS3/src/graphm.h
+
+/home/jeffmur/UWB/AS3/src/graphm.h
 nodedata.h
 /home/jeffmur/UWB/AS3/src/nodedata.h
 
@@ -17,12 +27,4 @@ iostream
 -
 fstream
 -
-
-/home/jeffmur/UWB/AS3/src/testing.cpp
-iostream
--
-fstream
--
-graphM.h
-/home/jeffmur/UWB/AS3/src/graphM.h
 
