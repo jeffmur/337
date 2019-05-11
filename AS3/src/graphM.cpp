@@ -13,6 +13,8 @@ using namespace std;
         sets all visited to false,
         and sets all path to 0. */
 GraphM::~GraphM(){
+    for(int i = 0; i < 100; i++)
+        delete data[i];
 }
 
 /* buildGraph: builds up graph node information
@@ -34,7 +36,7 @@ void GraphM::buildGraph(ifstream& infile) {
         // using substring to remove "\r" from end of string
         NodeData *name = new NodeData(s.substr(0, s.size()-1));
         // assign data[i] to new ptr
-        data[i] = *name;
+        data[i] = name;
     }
     string f, t, w;
     int from, to, weight;
@@ -59,6 +61,8 @@ void GraphM::buildGraph(ifstream& infile) {
 /* insertEdge (int from, int to, int weight): insert an edge into graph between two given nodes */
 void GraphM::insertEdge(int from, int to, int weight) {
     // error handling??
+    if(to > size)
+        size = to;
     C[from][to] = weight;
 }
 /* removeEdge (int from, int to): remove an edge between two given nodes */
@@ -89,20 +93,14 @@ void GraphM::findShortestPath() {
                 if(C[v][w] != 0) {
                     // assign path only if not visited
                     if (!T[v][w].visited) {
-                        T[v][w].dist = (T[1][v].dist + C[v][w]);
+                        int minDist = minDistance(v, w, INT8_MAX);
+                        if(minDist < C[v][w])
+                            T[v][w].dist = (minDist);
+                        else
+                            T[v][w].dist = (C[v][w]);
+                        // mark as visited & set path
                         T[v][w].visited = true;
                         T[v][w].path = v;
-                        // found shorter path - updates source vector
-                        if(T[source][w].dist > T[v][w].dist){
-                            T[source][w].dist = T[v][w].dist;
-                            T[source][w].path = v;
-                            // set all adjacent paths to false
-                            for(int i = 1; i <= size; i++){
-                                T[w][i].visited = false;
-                            }
-                            // restart path
-                            //findShortestPath();
-                        }
                     }
                 }
             }
@@ -110,23 +108,25 @@ void GraphM::findShortestPath() {
     }
 }
 
-int GraphM::minDistance(int fromIndex, int toIndex) {
-    int min = INT8_MAX;
-    if(fromIndex != 1){
-        min = C[fromIndex][toIndex];
+int GraphM::minDistance(int fromIndex, int toIndex, int min) {
+    int nextPath = 0;
+    // base case and out of bounds check
+    if(fromIndex == toIndex || fromIndex == 0){
+        return 0;
     }
-    if(T[fromIndex][toIndex].dist > 0 && min > T[fromIndex][toIndex].dist)
-        min = T[fromIndex][toIndex].dist;
-    else{
-        for(int i = 1; i <=size; i++) {
-            if (min > T[i][toIndex].dist && T[i][toIndex].dist > 0)
-                min = T[i][toIndex].dist;
+    // Avoids source vector
+    for(int v = 2; v <= size; v++){
+        // find shortest weight in vector
+        if(C[fromIndex][v] <= min && C[fromIndex][v] > 0){
+            min = C[fromIndex][v];
+            nextPath = v;
         }
     }
-    if(min <= 0 || min == INT8_MAX){
-        return -1;
-    }
-    return min;
+    // min is unchanged then return
+    if(min == INT8_MAX)
+        return 0;
+    // recursive call
+    return min + minDistance(nextPath, toIndex, min);
 }
 
 /* displayAll: uses couts to demonstrate that the algorithm works properly.
@@ -145,12 +145,4 @@ int GraphM::minDistance(int fromIndex, int toIndex) {
 /* Add utility functions as needed
     * initArray(); - Constructor */
 
-int GraphM::getNodeSize(int costArray[100]){
-    int nodeSize = 0;
-    for(int i = 1; i <= 100; i++){
-        if(costArray[i] != 0)
-            nodeSize++;
-    }
-    return nodeSize;
-}
     // initArray(); - Constructor

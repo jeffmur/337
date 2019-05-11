@@ -13,12 +13,12 @@ class GraphM {
     struct TableType {
         bool visited = false;             // whether node has been visited
         int dist = -1;                    // shortest distance from source known so far (-1 = infinity)
-        int path = 0;                     // previous node in path of min dist
+        int path = 0;              // previous node in path of min dist
 
     };
 
 private:
-    NodeData data[MAXNODES];              // data for graph nodes
+    NodeData* data[MAXNODES];              // data for graph nodes
     int C[MAXNODES][MAXNODES];            // Cost array, the adjacency matrix
     int size;                             // number of nodes in the graph
     TableType T[MAXNODES][MAXNODES];      // stores visited, distance, path
@@ -29,10 +29,10 @@ public:
     void insertEdge(int from, int to, int weight);
     void deleteEdge(int from, int to);
     void findShortestPath();
-    int minDistance(int from, int to);
+    int minDistance(int from, int to, int min);
     void displayAll();
     void display();
-    int getNodeSize(int costArray[100]);
+    int getPath(int from, int to, int weight);
 
 };
 

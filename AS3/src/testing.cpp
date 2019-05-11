@@ -8,9 +8,7 @@ int main() {
     GraphM Test;
     Test.buildGraph(infile1);
     Test.findShortestPath();
-    for(int i = 1; i <= 5; i++){
-        for(int j=1; j<=5; j++)
-            cout << "minDistance(" << i << "," << j << "): " << Test.minDistance(i,j) << endl;
-    }
+    Test.insertEdge(1,4, 10);
+    Test.findShortestPath();
     return 0;
 }
