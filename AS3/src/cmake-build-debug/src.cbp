@@ -84,19 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jeffmur/UWB/AS3/src/graphm.cpp">
+		<Unit filename="/home/jeffmur/UWB/AS3/src/graphl.cpp">
 			<Option target="src"/>
 		</Unit>
-		<Unit filename="/home/jeffmur/UWB/AS3/src/graphm.h">
-			<Option target="src"/>
-		</Unit>
-		<Unit filename="/home/jeffmur/UWB/AS3/src/lab3.cpp">
+		<Unit filename="/home/jeffmur/UWB/AS3/src/graphl.h">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/jeffmur/UWB/AS3/src/nodedata.cpp">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/jeffmur/UWB/AS3/src/nodedata.h">
+			<Option target="src"/>
+		</Unit>
+		<Unit filename="/home/jeffmur/UWB/AS3/src/testing.cpp">
 			<Option target="src"/>
 		</Unit>
 		<Unit filename="/home/jeffmur/UWB/AS3/src/CMakeLists.txt">

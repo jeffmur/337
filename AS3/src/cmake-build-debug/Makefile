@@ -123,59 +123,32 @@ src/fast:
 	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/build
 .PHONY : src/fast
 
-graphm.o: graphm.cpp.o
+graphl.o: graphl.cpp.o
 
-.PHONY : graphm.o
-
-# target to build an object file
-graphm.cpp.o:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graphm.cpp.o
-.PHONY : graphm.cpp.o
-
-graphm.i: graphm.cpp.i
-
-.PHONY : graphm.i
-
-# target to preprocess a source file
-graphm.cpp.i:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graphm.cpp.i
-.PHONY : graphm.cpp.i
-
-graphm.s: graphm.cpp.s
-
-.PHONY : graphm.s
-
-# target to generate assembly for a file
-graphm.cpp.s:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graphm.cpp.s
-.PHONY : graphm.cpp.s
-
-lab3.o: lab3.cpp.o
-
-.PHONY : lab3.o
+.PHONY : graphl.o
 
 # target to build an object file
-lab3.cpp.o:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/lab3.cpp.o
-.PHONY : lab3.cpp.o
+graphl.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graphl.cpp.o
+.PHONY : graphl.cpp.o
 
-lab3.i: lab3.cpp.i
+graphl.i: graphl.cpp.i
 
-.PHONY : lab3.i
+.PHONY : graphl.i
 
 # target to preprocess a source file
-lab3.cpp.i:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/lab3.cpp.i
-.PHONY : lab3.cpp.i
+graphl.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graphl.cpp.i
+.PHONY : graphl.cpp.i
 
-lab3.s: lab3.cpp.s
+graphl.s: graphl.cpp.s
 
-.PHONY : lab3.s
+.PHONY : graphl.s
 
 # target to generate assembly for a file
-lab3.cpp.s:
-	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/lab3.cpp.s
-.PHONY : lab3.cpp.s
+graphl.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/graphl.cpp.s
+.PHONY : graphl.cpp.s
 
 nodedata.o: nodedata.cpp.o
 
@@ -204,6 +177,33 @@ nodedata.cpp.s:
 	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/nodedata.cpp.s
 .PHONY : nodedata.cpp.s
 
+testing.o: testing.cpp.o
+
+.PHONY : testing.o
+
+# target to build an object file
+testing.cpp.o:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/testing.cpp.o
+.PHONY : testing.cpp.o
+
+testing.i: testing.cpp.i
+
+.PHONY : testing.i
+
+# target to preprocess a source file
+testing.cpp.i:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/testing.cpp.i
+.PHONY : testing.cpp.i
+
+testing.s: testing.cpp.s
+
+.PHONY : testing.s
+
+# target to generate assembly for a file
+testing.cpp.s:
+	$(MAKE) -f CMakeFiles/src.dir/build.make CMakeFiles/src.dir/testing.cpp.s
+.PHONY : testing.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,15 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... src"
 	@echo "... edit_cache"
-	@echo "... graphm.o"
-	@echo "... graphm.i"
-	@echo "... graphm.s"
-	@echo "... lab3.o"
-	@echo "... lab3.i"
-	@echo "... lab3.s"
+	@echo "... graphl.o"
+	@echo "... graphl.i"
+	@echo "... graphl.s"
 	@echo "... nodedata.o"
 	@echo "... nodedata.i"
 	@echo "... nodedata.s"
+	@echo "... testing.o"
+	@echo "... testing.i"
+	@echo "... testing.s"
 .PHONY : help
 
 

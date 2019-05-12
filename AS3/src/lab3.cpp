@@ -21,7 +21,7 @@ using namespace std;
 int main() {
 	
 	// part 1
-	ifstream infile1("/home/jeffmur/UWB/AS3/src/dataUWB.txt");
+	ifstream infile1("/home/jeffmur/UWB/AS3/src/data31.txt");
 	// ifstream infile1("data31.txt");
 	if (!infile1) {
 		cout << "File could not be opened." << endl;

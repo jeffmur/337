@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/src.dir/lab3.cpp.o"
-  "CMakeFiles/src.dir/graphm.cpp.o"
+  "CMakeFiles/src.dir/testing.cpp.o"
+  "CMakeFiles/src.dir/graphl.cpp.o"
   "CMakeFiles/src.dir/nodedata.cpp.o"
   "src.pdb"
   "src"
