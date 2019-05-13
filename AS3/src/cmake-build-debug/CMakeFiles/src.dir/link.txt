@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/src.dir/testing.cpp.o CMakeFiles/src.dir/graphl.cpp.o CMakeFiles/src.dir/nodedata.cpp.o  -o src 
+/usr/bin/c++  -g   CMakeFiles/src.dir/lab3.cpp.o CMakeFiles/src.dir/graphm.cpp.o CMakeFiles/src.dir/graphl.cpp.o CMakeFiles/src.dir/nodedata.cpp.o  -o src 

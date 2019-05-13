@@ -57,22 +57,35 @@ include CMakeFiles/src.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/src.dir/flags.make
 
-CMakeFiles/src.dir/testing.cpp.o: CMakeFiles/src.dir/flags.make
-CMakeFiles/src.dir/testing.cpp.o: ../testing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/src.dir/testing.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/testing.cpp.o -c /home/jeffmur/UWB/AS3/src/testing.cpp
+CMakeFiles/src.dir/lab3.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/lab3.cpp.o: ../lab3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/src.dir/lab3.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/lab3.cpp.o -c /home/jeffmur/UWB/AS3/src/lab3.cpp
 
-CMakeFiles/src.dir/testing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/testing.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeffmur/UWB/AS3/src/testing.cpp > CMakeFiles/src.dir/testing.cpp.i
+CMakeFiles/src.dir/lab3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/lab3.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeffmur/UWB/AS3/src/lab3.cpp > CMakeFiles/src.dir/lab3.cpp.i
 
-CMakeFiles/src.dir/testing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/testing.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeffmur/UWB/AS3/src/testing.cpp -o CMakeFiles/src.dir/testing.cpp.s
+CMakeFiles/src.dir/lab3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/lab3.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeffmur/UWB/AS3/src/lab3.cpp -o CMakeFiles/src.dir/lab3.cpp.s
+
+CMakeFiles/src.dir/graphm.cpp.o: CMakeFiles/src.dir/flags.make
+CMakeFiles/src.dir/graphm.cpp.o: ../graphm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/src.dir/graphm.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/graphm.cpp.o -c /home/jeffmur/UWB/AS3/src/graphm.cpp
+
+CMakeFiles/src.dir/graphm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/src.dir/graphm.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeffmur/UWB/AS3/src/graphm.cpp > CMakeFiles/src.dir/graphm.cpp.i
+
+CMakeFiles/src.dir/graphm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/src.dir/graphm.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeffmur/UWB/AS3/src/graphm.cpp -o CMakeFiles/src.dir/graphm.cpp.s
 
 CMakeFiles/src.dir/graphl.cpp.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/graphl.cpp.o: ../graphl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/src.dir/graphl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/src.dir/graphl.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/graphl.cpp.o -c /home/jeffmur/UWB/AS3/src/graphl.cpp
 
 CMakeFiles/src.dir/graphl.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/src.dir/graphl.cpp.s: cmake_force
 
 CMakeFiles/src.dir/nodedata.cpp.o: CMakeFiles/src.dir/flags.make
 CMakeFiles/src.dir/nodedata.cpp.o: ../nodedata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/src.dir/nodedata.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/src.dir/nodedata.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/src.dir/nodedata.cpp.o -c /home/jeffmur/UWB/AS3/src/nodedata.cpp
 
 CMakeFiles/src.dir/nodedata.cpp.i: cmake_force
@@ -98,19 +111,21 @@ CMakeFiles/src.dir/nodedata.cpp.s: cmake_force
 
 # Object files for target src
 src_OBJECTS = \
-"CMakeFiles/src.dir/testing.cpp.o" \
+"CMakeFiles/src.dir/lab3.cpp.o" \
+"CMakeFiles/src.dir/graphm.cpp.o" \
 "CMakeFiles/src.dir/graphl.cpp.o" \
 "CMakeFiles/src.dir/nodedata.cpp.o"
 
 # External object files for target src
 src_EXTERNAL_OBJECTS =
 
-src: CMakeFiles/src.dir/testing.cpp.o
+src: CMakeFiles/src.dir/lab3.cpp.o
+src: CMakeFiles/src.dir/graphm.cpp.o
 src: CMakeFiles/src.dir/graphl.cpp.o
 src: CMakeFiles/src.dir/nodedata.cpp.o
 src: CMakeFiles/src.dir/build.make
 src: CMakeFiles/src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable src"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeffmur/UWB/AS3/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable src"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/src.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -12,17 +12,23 @@ GraphNode::GraphNode(NodeData* d){ data = d; }
 GraphL::GraphL(){
     for(int i = 0; i <= 100; i++){
         E[i] = NULL;
-        D[i];
+        D[i] = NULL;
     }
 }
 
 GraphL::~GraphL(){
-    for(int i = 0; i <= 100; i++){
+    for(int i = 1; i <= size; i++){
         // delete E[i] content
-        // E[i] = NULL
+        deleteEdge(E[i]);
+        E[i] = NULL;
 
         // delete D[i] content
-        // D[i] = NULL
+        if(D[i] != NULL){
+            delete D[i]->data;
+            D[i]->edgeHead = NULL;
+            delete D[i];
+            D[i] = NULL;
+        }
     }
 }
 
@@ -48,7 +54,6 @@ void GraphL::buildGraph(ifstream& infile) {
         //  & assign data[i] to new ptr
         NodeData *d = new NodeData(s.substr(0, s.size()-1));
         D[i] = new GraphNode(d);
-        D[i]->edgeHead = E[i];
     }
     string src, adj;
     int f, t;
@@ -64,8 +69,9 @@ void GraphL::buildGraph(ifstream& infile) {
 
         // insert edge nodes
         insertEdge(f,t);
-        cout << "From: " << f << " To: " << t << endl;
     }
+    for(int i = 1; i <= l; i++)
+        D[i]->edgeHead = E[i];
 
 }
 
@@ -80,25 +86,53 @@ void GraphL::insertEdge(int from, int to) {
     E[from] = toAdd;
 }
 
-void GraphL::depthFirstSearch() {
-     // mark all not visited
-     for (int v = 1; v <= size; v++) {
-         cout << v << ": ";
-         if (!D[v]->visited)
-             dfs(v);
-         cout << endl;
-     }
+void GraphL::deleteEdge(EdgeNode *edge) {
+    while(edge != NULL && edge->nextEdge != 0){
+        edge->adjGraphNode = 0;
+        if(edge->nextEdge != NULL)
+            deleteEdge(edge->nextEdge);
+        edge->nextEdge = NULL;
+    }
+    delete edge;
+    edge = NULL;
 }
 
-void GraphL::dfs(int base){
-    if(base <= size){
-        D[base]->visited = true;
-        if(E[base] != NULL){
-            cout << E[base]->adjGraphNode << " ";
-            if(E[base]->nextEdge != NULL)
-                dfs(base+=1);
+void GraphL::depthFirstSearch() {
+     // mark all not visited
+     cout << endl << "Depth-first ordering: ";
+     for (int v = 1; v <= size; v++) {
+         if (!D[v]->visited)
+             dfs(v, D[v]->edgeHead);
+     }
+     cout << endl;
+}
+
+void GraphL::dfs(int base, EdgeNode* cur){
+    // mark v visited & print value
+    D[base]->visited = true;
+    cout << base << " ";
+    // check for adj
+    if(D[base]->edgeHead != NULL){
+        cur = D[base]->edgeHead;
+        // for each W adj to V
+        if(cur != NULL){
+            int adj = cur->adjGraphNode;
+
+            // if ( w not visited)
+            if(!D[adj]->visited)
+                dfs(adj, cur->nextEdge);
         }
     }
-    else return;
+}
 
+void GraphL::displayGraph() {
+    cout << endl << "Graph:" << endl;
+    for(int v = 1; v <= size; v++){
+        cout << "Node " << v << " \t\t " << *D[v]->data << endl;
+        EdgeNode* ptr = E[v];
+        while(ptr){
+            cout << "  edge " << v << " " << ptr->adjGraphNode << endl;
+            ptr = ptr->nextEdge;
+        }
+    }
 }
