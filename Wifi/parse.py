@@ -3,16 +3,19 @@
 import numpy as np
 import pandas as pd
 
-reader = pd.read_csv(filepath_or_buffer = "/home/jeffmur/nexusOne.csv",
-				 names = ['Protocol', 'Result'],
+reader = pd.read_csv(filepath_or_buffer = "smallData.csv",
+				 names = ['Garbage', 'Garbage2', 'Time', 'Protocol', 'Result'],
 				 sep = ";",
-				 chunksize = 1,
-                                 iterator = True,
 				 keep_date_col = True,
-				 na_values=['N/A'],
-				 usecols = [3, 4]);
-for chunk in reader:
-     print(chunk)
+				 na_values=['N/A']);
+
+df = pd.DataFrame(reader, columns=['Protocol', 'Result'])
+
+for i in df['Protocol']:
+   if(i[0] == 'w' & i[int(len(i)-1)] == 'd'):
+	 print(i)
+
+df.loc[df['Protocol'] == 'w']
 
 # Looking for 
 # 	"phone|sim|serial"
