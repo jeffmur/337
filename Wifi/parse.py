@@ -2,18 +2,19 @@
 from timeit import default_timer as timer
 import numpy as np
 import pandas as pd
-#/home/jeffmur/nexusOne.csv
-reader = pd.read_csv(filepath_or_buffer = "/home/jeffmur/nexusOne.csv",
+#   /home/jeffmur/nexusOne.csv      smallData.csv
+reader = pd.read_csv(filepath_or_buffer = "smallData.csv",
 				 names = ['Garbage', 'Garbage2', 'time', 'protocol', 'result'],
 				 sep = ";",
 				 keep_date_col = True,
+				 
 				 na_values=['N/A']);
 
 # set up dataFrame for protocol and result
 df = pd.DataFrame(reader, columns=['time', 'protocol', 'result'])
 
 # remove any duplicates
-df.drop_duplicates(keep='first')
+df['result'].drop_duplicates(keep='first')
 
 
 # found serial number
@@ -44,12 +45,37 @@ def getData():
    end = timer()
    print("Time elapsed: " + str(end - start))
    return parsedData
-	 
 
-print(getData())
+data = [{'time', 'serial', 'macAddress', 'ssid'}]
 
+def loc_serial(df):	 
+    name = df.iloc[np.where(df.protocol.values == 'phone|sim|serial')]
+    ssid = name['result']
+    for s in ssid:
+	print("Device ID: " + s)
 
+def loc_mac(df):
+    base = df.iloc[np.where(df.protocol.str.contains('ssid'))]
+    mac = base['protocol']
+    ssid = base['result']
+    for s in ssid:
+	data.append({'ssid':s})
+    time = base['time']
+    for t in time:
+	data.append({'time':t})
+    for ads in mac:
+	if(ads[5] == 'c'):
+	    data.append({'macAddress':ads[16:(len(ads)-5)]})
+	else:
+	    data.append({'macAddress':ads[10:(len(ads)-5)]})
+    
+    for a in data:
+	print a
 
+ 
+loc_serial(df)
+loc_mac(df)
+   
 # Looking for 
 # 	"phone|sim|serial"
 #	"wifi|scan| MAC ADDRESS |ssid"
