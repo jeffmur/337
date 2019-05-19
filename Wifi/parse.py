@@ -3,7 +3,7 @@ from timeit import default_timer as timer
 import numpy as np
 import pandas as pd
 #   /home/jeffmur/nexusOne.csv      smallData.csv
-reader = pd.read_csv(filepath_or_buffer = "smallData.csv",
+reader = pd.read_csv(filepath_or_buffer = "/home/jeffmur/nexusOne.csv",
 				 names = ['Garbage', 'Garbage2', 'time', 'protocol', 'result'],
 				 sep = ";",
 				 keep_date_col = True,
@@ -46,36 +46,25 @@ def getData():
    print("Time elapsed: " + str(end - start))
    return parsedData
 
-data = [{'time', 'serial', 'macAddress', 'ssid'}]
-
-def loc_serial(df):	 
+def loc_serial(df):	
     name = df.iloc[np.where(df.protocol.values == 'phone|sim|serial')]
-    ssid = name['result']
-    for s in ssid:
-	print("Device ID: " + s)
+    return name['result'].drop_duplicates(keep='first')
 
 def loc_mac(df):
+    start = timer()
     base = df.iloc[np.where(df.protocol.str.contains('ssid'))]
-    mac = base['protocol']
-    ssid = base['result']
-    for s in ssid:
-	data.append({'ssid':s})
     time = base['time']
-    for t in time:
-	data.append({'time':t})
-    for ads in mac:
-	if(ads[5] == 'c'):
-	    data.append({'macAddress':ads[16:(len(ads)-5)]})
-	else:
-	    data.append({'macAddress':ads[10:(len(ads)-5)]})
-    
-    for a in data:
-	print a
+    device = [loc_serial(df).values] * len(base)
+    ssid = base['result']
+    mac = base['protocol']
+    mac = mac.map(lambda x: str(x)[16:-5] if(str(x)[5] == 'c')	
+                             else str(x)[10:-5])
+    data = ({'time':time.values, 'macaddress':mac.values, 'ssid':ssid.values});
+    end = timer()
+    print("Time elapsed: " + str(end - start))
+    return pd.DataFrame(data)
 
- 
-loc_serial(df)
-loc_mac(df)
-   
+print loc_mac(df)
 # Looking for 
 # 	"phone|sim|serial"
 #	"wifi|scan| MAC ADDRESS |ssid"
