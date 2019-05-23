@@ -1,0 +1,11 @@
+Should be $119 with Chris's (1941191) or Tim's (1941193) SID. 
+
+EMD    : DFF663AFB11C4E8450033D1E90DC8F18
+SID    : 1941191
+Amount : 119
+
+EMD    : 9DC4B037A1772850022EBA2C45648F2F
+SID    : 1941193
+Amount : 119
+
+Console View is attached to upload.
